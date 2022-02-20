@@ -1,5 +1,5 @@
 html {
-  background: #9BC1BC;
+  background: #FFFDED;
 }
 
 .center_full {
@@ -21,10 +21,10 @@ html {
 }
 
 .button {
-  background-color: #5CA4A9;
+  background-color: #FA8334;
   color: white;
   font-family: monospace;
-  font-size: 80px;
+  font-size: 25px;
   padding: 10px 60px;
   border-radius: 10px;
   margin: 10px 0px;
