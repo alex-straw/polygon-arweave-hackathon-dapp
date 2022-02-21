@@ -11,3 +11,5 @@ Chainlink VRF2 contract on Rinkeby:
 
   - requestRandomWords --> contract function to request VRF
   - s_requestId --> random var stored here
+  - Only 0xF1C37BC188643DF4Bf15Fd437096Eb654d30abc1 can call this
+  - Contract loaded with ~ 5 Link
