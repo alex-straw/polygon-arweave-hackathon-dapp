@@ -1,13 +1,21 @@
 import React, {useState} from 'react'
-import {ethers} from 'ethers'
 import './App.css'
+import './WalletCard.js'
+import WalletCard from './WalletCard.js';
+const Web3 = require("web3");
+const Ethers = require("ethers");
 
-const PayUserCard = props => {  
+const PayUserCard = ({address}) => {  
     const [address1, setaddress1] = React.useState('');
     const [amount, setamount] = React.useState('');
-    
+
+    let infuraId = "1c722de80b77412f86091fdf4d04b74b";
+    let infuraAddress = "https://rinkeby.infura.io/v3/" + infuraId;
+    let web3 = new Web3(infuraAddress);
+
     const payAddress = () => {
-      alert(address1, amount)
+      // WalletCard.defaultAccount
+      alert(amount)
     }
   
     const handleAddressChange = (event) => {
@@ -37,7 +45,7 @@ const PayUserCard = props => {
               <input class = "text_box" onChange={handleAmountCHange} name = "_amount" placeholder="Type a message..." />
             </td>
             <td>
-
+            <p>{address}</p>
             </td>
           </tr>
         </table>

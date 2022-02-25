@@ -5,7 +5,7 @@ import {ethers} from 'ethers'
 import './WalletCard.css'
 import './App.css'
 
-const WalletCard = () => {
+const WalletCard = ({addressChanger}) => {
 
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [defaultAccount, setDefaultAccount] = useState(null);
@@ -37,6 +37,7 @@ const WalletCard = () => {
 	const accountChangedHandler = (newAccount) => {
 		setDefaultAccount(newAccount);
 		getAccountBalance(newAccount.toString());
+		addressChanger(newAccount.toString());
 	}
 
 	const getAccountBalance = (account) => {
@@ -76,3 +77,4 @@ const WalletCard = () => {
 }
 
 export default WalletCard;
+
