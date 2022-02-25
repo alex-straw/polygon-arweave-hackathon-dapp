@@ -62,13 +62,13 @@ const WalletCard = () => {
 	
 	return (
 		<div className='walletCard' class="center_middle">
-		<h4> {"Connection to MetaMask using window.ethereum methods"} </h4>
+		<h4> {"Wallet Pay DApp"} </h4>
 			<button class = "button" onClick={connectWalletHandler}>{connButtonText}</button>
 			<div className='accountDisplay'>
 				<h3>Address: {defaultAccount}</h3>
 			</div>
 			<div className='balanceDisplay'>
-				<h3>Balance: {userBalance}</h3>
+				<h3>Balance: {userBalance} ETH</h3>
 			</div>
 			{errorMessage}
 		</div>

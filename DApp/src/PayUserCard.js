@@ -3,16 +3,21 @@ import {ethers} from 'ethers'
 import './App.css'
 
 const PayUserCard = props => {  
-    const [textInput, setTextInput] = React.useState('');
-  
+    const [address1, setaddress1] = React.useState('');
+    const [amount, setamount] = React.useState('');
+    
     const payAddress = () => {
-      alert(textInput)
-      //props.send(textInput);
+      alert(address1, amount)
     }
   
-    const handleChange = (event) => {
-      setTextInput(event.target.value);
+    const handleAddressChange = (event) => {
+      setaddress1(event.target.value);
     }
+
+    const handleAmountCHange = (event) => {
+      setamount(event.target.value);
+    }
+
   
     return (
       <div>
@@ -26,7 +31,13 @@ const PayUserCard = props => {
           </tr>
           <tr>
             <td>
-              <input class = "text_box" onChange={handleChange} placeholder="Type a message..." />
+              <h3> Address to Pay: </h3>
+              <input class = "text_box" onChange={handleAddressChange} name = "_address" placeholder="Type a message..." />
+              <h3> Amount to Pay </h3>
+              <input class = "text_box" onChange={handleAmountCHange} name = "_amount" placeholder="Type a message..." />
+            </td>
+            <td>
+
             </td>
           </tr>
         </table>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import WalletCard from './WalletCard.js';
-import PayUserCard from './PayUserCard';
+import PayUserCard from './PayUserCard.js';
 
 function App() {
 
