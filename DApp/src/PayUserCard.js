@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {ethers} from 'ethers'
+import './App.css'
 
 const PayUserCard = props => {  
     const [textInput, setTextInput] = React.useState('');
@@ -15,10 +16,20 @@ const PayUserCard = props => {
   
     return (
       <div>
-        <input onChange={handleChange} placeholder="Type a message..." />
-        <button onClick={payAddress}>
-            Enter Address to Pay
-        </button>
+        <table class="center_middle">
+          <tr>
+            <td>
+            <button class = "button" onClick={payAddress}>
+                  Enter Address to Pay
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class = "text_box" onChange={handleChange} placeholder="Type a message..." />
+            </td>
+          </tr>
+        </table>
       </div>
     )
 }
